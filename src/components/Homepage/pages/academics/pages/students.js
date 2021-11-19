@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import StudentApp from "../components/app";
-import StudentFooter from "./studentfooter";
+import './home.css'
 
 import { Table } from "../Tables/table";
 import StudentDetails from "./studententry";
@@ -39,18 +39,18 @@ render() {
            
        ]
         return(
-            <div className="divleft">
-                <header className="divright">
+            <div >
+                <header >
                     
                 </header>
                 
                 <div >
 				
-				<div className="flex-large">
-					<h2>Student List</h2>
+				<div className="ytg">
+					<h2 className="gg">Student List</h2>
                     {console.log('api response',this.state.students)}
-					<Table rows={this.state.students} columns={columns} />
-                    <StudentFooter />
+					<div className="ta,tb"><Table rows={this.state.students} columns={columns} /></div>
+                    
 				</div>
 			</div>
             </div>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 //import StudentApp from "../components/app";
-import FacultyFooter from "./facultyfooter";
-
+//import FacultyFooter from "./facultyfooter";
+import './home.css'
 import { Table } from "../Tables/table";
 import StudentDetails from "./studententry";
 import axios from 'axios';
@@ -33,18 +33,18 @@ render() {
            
        ]
         return(
-            <div className="divleft">
-                <header className="divright">
+            <div >
+                <header >
                     
                 </header>
                 
                 <div >
 				
-				<div className="flex-large">
-					<h2>Faculty List</h2>
+				<div className="ytg">
+					<h2 className="gg">Faculty List</h2>
                     {console.log('api response',this.state.faculties)}
-					<Table rows={this.state.faculties} columns={columns} />
-                    <FacultyFooter />
+					<div className="ta,tb"><Table rows={this.state.faculties} columns={columns} /></div>
+                    
 				</div>
 			</div>
             </div>

@@ -18,7 +18,7 @@ function StudentApp(){
             <div className="th,td">
               
               <Switch>
-                  <Route path="/" component={Academicinfo}></Route>
+                  <Route path="/academicspg/" component={Academicinfo}></Route>
               </Switch>
               <Switch>
                   <Route path="/admission" component={AdmissionDetails}></Route>
@@ -40,7 +40,7 @@ function StudentApp(){
             <hr />
       
             <Switch>
-            <Route exact path="/">
+            <Route exact path="/academicspg/">
                 <Academicinfo />
               </Route>
               <Route exact path="/admission">

@@ -6,7 +6,7 @@ import imgs from './faculty.jpg'
 import './home.css'
 import AdmissionDetails from './admissionentry';
 import {  Route, Router, Link, Switch } from "react-router-dom";
-import Footer from './footer';
+
 
 
 
@@ -22,29 +22,30 @@ const Academicinfo = () =>{
         setPreviewShown(true); // Here we change state
     }
   return (
-    <div className="container">
-      <h1 className="h1">Academic Information</h1>
-      <div className="container">
-          <h3 className="center">Academic Details</h3>
-          <p className="center">MGM students come from across the U.S. and the world, representing diverse experiences, backgrounds and cultures.</p>
+    <div className="yty">
+      <h1 className="gg">Academic Information</h1>
+      <div className="yty">
+          <h3 className="gg">Academic Details</h3>
+          <p className="gg">MGM students come from across the U.S. and the world, representing diverse experiences, backgrounds and cultures.</p>
           
           {/* <button onClick={clickme} className="btn">Apply Now</button> */}
 
           
         
           <Link to="/admission">
-            <div><img src={img} alt='Logo' />
-            <h1 className="text-on-image">Apply Now</h1>
+            <div><img className="ig"src={img} alt='Logo' />
+            <h1 className="centered"><button>Apply Now</button></h1>
             </div>
             </Link>
             
-            
+            <div className="yty">
             <div className="divleft">
             <h2 >Student Details </h2>
           <p >About 1,700 freshmen and 30 transfer students are admitted to Stanford each year. We review each applicant with an eye to academic excellence, intellectual vitality and personal context.</p>
-          <Link to="/student">
-              <div><img src={im} alt='Logo'/>
-              <h1>Click here for Student Information</h1>
+          <p>The Associated Students of Stanford University (ASSU) is the student government for Stanford and all registered students are members. Its elected leadership consists of the Undergraduate Senate elected by the undergraduate students, the Graduate Student Council elected by the graduate students, and the President and Vice President elected as a ticket by the entire student body.</p>
+            <Link to="/student">
+              <div><img className="pi"src={im} alt='Logo'/>
+              <h1 className="bottom-left"><button> Student Information</button></h1>
               </div>
               </Link> 
               </div>
@@ -53,13 +54,17 @@ const Academicinfo = () =>{
         <div className="divright">
           <h3>Faculty Details</h3>
           <p>MGM Engineering has long been at the forefront of groundbreaking research, education and innovation. Through the development and application of engineering principles across disciplines, we are tackling the major challenges of the 21st century.</p>
-          <Link to='/faculty'>
-              <div><img src={imgs} alt='Logo'/>
-              <h1>Click here for Faculty information</h1>
-              <Footer />
+          <p>Many MGM faculty members live in the "Faculty Ghetto," within walking or biking distance of The academic central campus is adjacent to Palo Alto, bounded by El Camino Real, Stanford Avenue, Jane Stanford Way, and Sand Hill Road. Many Stanford faculty members live in the "Faculty Ghetto," </p>
+            <Link to='/faculty'>
+              <div className="img"><img className="ip"src={imgs} alt='Logo'/>
+              <h1 className="bottom-right"><button> Faculty information</button></h1>
+              
               </div>
               </Link>
           </div>
+          
+            </div>
+            
           
           
       </div>

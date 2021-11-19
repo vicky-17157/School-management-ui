@@ -2,7 +2,7 @@ import React, { useState, Fragment, Component } from 'react'
 import AddAdmissionForm from '../forms/admission_form'
 import AdmissionTable from '../Tables/admissiontable'
 import { Table } from '../Tables/table'
-import AdmissionFooter from './admissionfooter'
+
 import './home.css'
 import '../forms/admission_form.css'
 
@@ -40,14 +40,15 @@ const AdmissionDetails= () =>  {
         
         return (
             <div>
-                <h1 className="">Admission Form</h1>
+                <h1 className="gg">Admission Form</h1>
               <div ><AddAdmissionForm /></div>  
                 <div >
                     
-                    <div className="flex-large">
+                    <div className="ytg">
                         <h2>Admission Information</h2>
-                        <Table rows={items} columns={columns}  />
-                        <AdmissionFooter />
+                        <div className="ta,tb"><Table rows={items} columns={columns}  /></div>
+                        
+                        
                     </div>
                 </div>
             </div>

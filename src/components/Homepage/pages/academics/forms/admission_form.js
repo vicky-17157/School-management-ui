@@ -1,174 +1,152 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const inputParsers = {
-  date(input) {
-    const [month, day, year] = input.split('/');
-    return `${year}-${month}-${day}`;
-  },
-  uppercase(input) {
-    return input.toUpperCase();
-  },
-  number(input) {
-    return parseFloat(input);
-  },
-};
+import axios from "axios"; 
 
-class AddAdmissionForm extends React.Component {
-  constructor() {
-    super();
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
-  handleSubmit(event) {
+class SubmitForm extends Component {
+    constructor() {
+        super();
+  this.state = {
+    studentName: 'Santhosh',
+    fee:'',
+    guardianName:'',
+    class:'',
+    admissionDate:'',
+    dob:'',
+    type:'',
+    previousSchool:'',
+    bloodGroup:'',
+    idProof:'',
+    contactNumber:'',
+    gender:'',
+    address:''
+  }};
+  
+/* This is where the magic happens 
+*/
+handleSubmit = event => {
     event.preventDefault();
-    const form = event.target;
-    const data = new FormData(form);
-
-    for (let name of data.keys()) {
-      const input = form.elements[name];
-      const parserName = input.dataset.parse;
-
-      if (parserName) {
-        const parser = inputParsers[parserName];
-        const parsedValue = parser(data.get(name));
-        data.set(name, parsedValue);
-      }
-    }
+    const user = {
+      studentName: this.state.studentName,
+      fee:this.state.fee,
+      guardianName:this.state.guardianName,
+      class:this.state.class,
+      admissionDate:this.state.admissionDate,
+      dob:this.state.dob,
+      type:this.state.type,
+      previousSchool:this.state.previousSchool,
+      bloodGroup:this.state.bloodGroup,
+      idProof:this.state.idProof,
+      contactNumber:this.state.contactNumber,
+      gender:this.state.gender,
+      address:this.state.address
+    } 
     
-    fetch('http://localhost:4000/admission', {
-      method: 'POST',
-      body: data,
-    });
+    axios.post('http://localhost:4000/admission', { user })
+      .then(res=>{
+        console.log(res);
+        console.log(res.data);
+        window.alert("Successfully added")
+        window.location = "/student" //This line of code will redirect you once the submission is succeed
+      })
+  }
+  handleChange = event =>{
+    this.setState({ studentName: event.target.value});
+  }
+  handleChangeGuardianName = event =>{
+    this.setState({ guardianName: event.target.value});
   }
 
-  render() {
+  handleChangeFee = event =>{
+      this.setState({fee:event.target.value})
+  }
+  handleChangeGuardianName = event =>{
+    this.setState({guardianName:event.target.value})
+}
+handleChangeClass = event =>{
+    this.setState({class:event.target.value})
+}
+handleChangeAdmissionDate = event =>{
+    this.setState({admissionDate:event.target.value})
+}
+handleChangeDob = event =>{
+    this.setState({dob:event.target.value})
+}
+handleChangeType = event =>{
+    this.setState({type:event.target.value})
+}
+handleChangePreviousSchool = event =>{
+    this.setState({previousSchool:event.target.value})
+}
+handleChangeBloodGroup = event =>{
+    this.setState({bloodGroup:event.target.value})
+}
+handleChangeIdProof = event =>{
+    this.setState({idProof:event.target.value})
+}
+handleChangeContactNumber = event =>{
+    this.setState({contactNumber:event.target.value})
+}
+handleChangeGender = event =>{
+    this.setState({gender:event.target.value})
+}
+handleChangeAddress = event =>{
+    this.setState({address:event.target.value})
+}
+render() {
+  
     return (
-      <form onSubmit={this.handleSubmit}>
-		  <div>
-		  <label>Fee</label>
-        <input
-          name="fee"
-          type="number"
-          data-parse="number"
-        />
-		  </div>
-		  
+    
+      
+        <form onSubmit = { this.handleSubmit }>
+          <label> Person Name:
+            <input type = "text" name = "studentName"  onChange= {this.handleChange}/>
+            </label>
+            <label> fee:
+            <input type = "text" name = "fee"   onChange= {this.handleChangeFee}/>
+            </label>
+            <label> guardianName:
+            <input type = "text" name = "guardianName"   onChange= {this.handleChangeGuardianName}/>
+            </label>
+             <label> class:
+            <input type = "text" name = "class"   onChange= {this.handleChangeClass}/>
+            </label>
+            <label>admissionDate:
+            <input type = "text" name = "admissionDate"   onChange= {this.handleChangeAdmissionDate}/>
+            </label>
+            <label> dob:
+            <input type = "text" name = "dob"   onChange= {this.handleChangeDob}/>
+            </label>
+            <label>type:
+            <input type = "text" name = "type"   onChange= {this.handleChangeType}/>
+            </label>
+            <label> previousSchool:
+            <input type = "text" name = "previousSchool"   onChange= {this.handleChangePreviousSchool}/>
+            </label>
+            <label> bloodGroup:
+            <input type = "text" name = "bloodGroup"  onChange= {this.handleChangeBloodGroup}/>
+            </label>
+            <label> idProof:
+            <input type = "text" name = "idProof"   onChange= {this.handleChangeIdProof}/>
+            </label>
+            <label> contactNumber:
+            <input type = "text" name = "contactNumber"   onChange= {this.handleChangeContactNumber}/>
+            </label>
+            <label> gender:
+            <input type = "text" name = "gender"   onChange= {this.handleChangeGender}/>
+            </label>
+            <label>address:
+            <input type = "text" name = "address"   onChange= {this.handleChangeAddress}/>
+            </label>
+          
+          
+          <button type = "submit"> Add </button>
+        </form>
+  
+ 
 
-        <div class>
-		<label>Student-Name</label>
-        <input
-          name="studentName"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		<div>
-		<label>Guardian-Name</label>
-		<input
-          name="guardianName"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		<div>
-		<label>Class</label>
-		<input
-          name="class"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
 
-		<div>
-		<label>Admission-Date</label>
-		<input
-          name="admissionDate"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		<div>
-		<label>Date-of-birth</label>
-		<input
-          name="dob"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-
-		<div>
-		<label>Type</label>
-		<input
-          name="type"
-          type="text"
-          data-parse="uppercase"
-        />	
-		</div>
-		
-		<div>
-		<label>Previos school</label>
-		<input
-          name="previousSchool"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		<div>
-		<label>Blood-Group</label>
-		<input
-          name="bloodGroup"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		
-		<div>
-		<label>Id-Proof</label>
-		<input
-          name="idProof"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		<div>
-		<label>Contact Number</label>
-		<input
-          name="contactNumber"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		<div>
-		<label>Gender</label>
-		<input
-          name="gender"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		<div>
-		<label>Address</label>
-		<input
-          name="address"
-          type="text"
-          data-parse="uppercase"
-        />
-		</div>
-		
-		
-
-        <button>Submit</button>
-      </form>
     );
   }
 }
-
-export default AddAdmissionForm;
+export default SubmitForm;
