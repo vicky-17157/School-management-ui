@@ -8,7 +8,7 @@ import Event from "./Homepage/pages/Event";
 import Academic from "./Homepage/pages/Academic";
 
 import "./App.css";
-import Footer from "./Homepage/Footer/footer";
+//import Footer from "./Homepage/Footer/footer";
 
 
 
@@ -31,7 +31,7 @@ function App() {
       
 
 
-      <Footer />
+      
       
 
 

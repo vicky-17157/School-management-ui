@@ -1,6 +1,7 @@
 import React from "react";
 import { TiContacts,TiMail, TiLocation } from "react-icons/ti";
 import "./contactus.css"
+import Footer from "../Footer/footer"
 function Contactus() {
   return (
       <div className='contact'>
@@ -80,6 +81,7 @@ function Contactus() {
               </div>
 
           </div></><br /><br /><br /><br /><br /><br /></>
+          <Footer />
           </div>
     
   );

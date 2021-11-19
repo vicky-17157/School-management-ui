@@ -49,9 +49,9 @@ export const Table = ({ columns, rows }) => {
   }
 
   return (
-    <>
-      <table>
-        <thead className="th,td">
+    <div class="table-wrapper">
+      <table class="fl-table">
+      <thead className="ctn">
           <tr>
             {columns.map((column) => {
               const sortIcon = () => {
@@ -88,7 +88,7 @@ export const Table = ({ columns, rows }) => {
             })}
           </tr>
         </thead>
-        <tbody className="th,td">
+        <tbody >
           {calculatedRows.map((row) => {
             return (
               <tr key={row.id}>
@@ -104,6 +104,8 @@ export const Table = ({ columns, rows }) => {
           })}
         </tbody>
       </table>
+      
+      
 
       {count > 0 ? (
         <Pagination
@@ -122,6 +124,8 @@ export const Table = ({ columns, rows }) => {
           <button className="clear" onClick={clearAll}>Clear all</button>
         </p>
       </div>
-    </>
+      </div>
+    
   )
+  
 }

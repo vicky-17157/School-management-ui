@@ -4,6 +4,7 @@ import img3 from '../images/cultural.jpeg' ;
 import school from '../images/school.jpeg' ;
 import img1 from '../images/teachers day.jpeg' ;
 import img2 from '../images/childerns day.jpeg' ;
+import Footer from "../Footer/footer"
 function Event() {
     return (
       <div className='body'>  <header className="d1"><h1><i>Events & Activities</i></h1></header>
@@ -59,12 +60,18 @@ function Event() {
         <p className="card_discription"> We celebrate Children's day in India on 14th of November every year. India's First Prime Minister Pundit Jawaharlal Nehru was born in Allahabad on 14th November 1889. Pt. Jawaharlal Nehru popularly known as Chacha Nehru was very fond of children. His love for Children was immense. </p>
         </div>
         <button className="card_button"> Know More  </button>
+          
+      </div>
           <br />
           <br />
           <br />
           <br />
       </div>
-      </div>
+        <br />
+        <br />
+          <br />
+          <br />
+      <Footer />
       </div>
     )
       

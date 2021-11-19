@@ -10,6 +10,7 @@ import img6 from '../images/1.jpg'
 import img7 from '../images/2.jpg'
 import img8 from '../images/3.jpg'
 import { Grid } from '@material-ui/core'
+import Footer from "../Footer/footer"
 export default function Aboutus() {
     return (    
     <div className="about">
@@ -110,8 +111,10 @@ export default function Aboutus() {
           <center><img src={img1}></img></center>
           <br/>
     </div>
-    
+    <Footer />
     </div>
+    
+    
   );
 }
 

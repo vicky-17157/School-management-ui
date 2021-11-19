@@ -44,12 +44,11 @@ const AdmissionDetails= () =>  {
               <div ><AddAdmissionForm /></div>  
                 <div >
                     
-                    <div className="ytg">
-                        <h2>Admission Information</h2>
-                        <div className="ta,tb"><Table rows={items} columns={columns}  /></div>
+                    
                         
                         
-                    </div>
+                        
+                    
                 </div>
             </div>
         )

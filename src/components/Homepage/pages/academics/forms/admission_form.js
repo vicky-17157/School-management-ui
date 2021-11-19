@@ -96,54 +96,56 @@ handleChangeAddress = event =>{
 render() {
   
     return (
-    
-      
+      <div className="body22">
+      <div classname="form1">
         <form onSubmit = { this.handleSubmit }>
-          <label> Person Name:
-            <input type = "text" name = "studentName"  onChange= {this.handleChange}/>
+          <label className="col-25"> 
+            <input placeholder="Person Name:" className="col-75 formEntry"type = "text" name = "studentName"  onChange= {this.handleChange}/>
             </label>
-            <label> fee:
-            <input type = "text" name = "fee"   onChange= {this.handleChangeFee}/>
+            <label className="col-25">
+            <input placeholder="Fee:" className="col-75 formEntry"type = "text" name = "fee"   onChange= {this.handleChangeFee}/>
             </label>
-            <label> guardianName:
-            <input type = "text" name = "guardianName"   onChange= {this.handleChangeGuardianName}/>
+            <label className="col-25"> 
+            <input  placeholder="guardianName:" className="col-75 formEntry"type = "text" name = "guardianName"   onChange= {this.handleChangeGuardianName}/>
             </label>
-             <label> class:
-            <input type = "text" name = "class"   onChange= {this.handleChangeClass}/>
+             <label className="col-25"> 
+            <input placeholder="class:" className="col-75 formEntry"type = "text" name = "class"   onChange= {this.handleChangeClass}/>
             </label>
-            <label>admissionDate:
-            <input type = "text" name = "admissionDate"   onChange= {this.handleChangeAdmissionDate}/>
+            <label className="col-25">
+            <input placeholder="admissionDate:"  className="col-75 formEntry" type = "text" name = "admissionDate"   onChange= {this.handleChangeAdmissionDate}/>
             </label>
-            <label> dob:
-            <input type = "text" name = "dob"   onChange= {this.handleChangeDob}/>
+            <label className="col-25"> 
+            <input placeholder="dob:" className="col-75 formEntry"type = "text" name = "dob"   onChange= {this.handleChangeDob}/>
             </label>
-            <label>type:
-            <input type = "text" name = "type"   onChange= {this.handleChangeType}/>
+            <label className="col-25">
+            <input placeholder="type:" className="col-75 formEntry"type = "text" name = "type"   onChange= {this.handleChangeType}/>
             </label>
-            <label> previousSchool:
-            <input type = "text" name = "previousSchool"   onChange= {this.handleChangePreviousSchool}/>
+            <label className="col-25"> 
+            <input placeholder="previousSchool:" className="col-75 formEntry"type = "text" name = "previousSchool"   onChange= {this.handleChangePreviousSchool}/>
             </label>
-            <label> bloodGroup:
-            <input type = "text" name = "bloodGroup"  onChange= {this.handleChangeBloodGroup}/>
+            <label className="col-25"> 
+            <input placeholder="bloodGroup:" className="col-75 formEntry"type = "text" name = "bloodGroup"  onChange= {this.handleChangeBloodGroup}/>
             </label>
-            <label> idProof:
-            <input type = "text" name = "idProof"   onChange= {this.handleChangeIdProof}/>
+            <label className="col-25"> 
+            <input placeholder="idProof:" className="col-75 formEntry"type = "text" name = "idProof"   onChange= {this.handleChangeIdProof}/>
             </label>
-            <label> contactNumber:
-            <input type = "text" name = "contactNumber"   onChange= {this.handleChangeContactNumber}/>
+            <label className="col-25"> 
+            <input placeholder="contactNumber:" className="col-75 formEntry"type = "text" name = "contactNumber"   onChange= {this.handleChangeContactNumber}/>
             </label>
-            <label> gender:
-            <input type = "text" name = "gender"   onChange= {this.handleChangeGender}/>
+            <label className="col-25"> 
+            <input placeholder="gender:" className="col-75 formEntry"type = "text" name = "gender"   onChange= {this.handleChangeGender}/>
             </label>
-            <label>address:
-            <input type = "text" name = "address"   onChange= {this.handleChangeAddress}/>
+            <label className="col-25">
+            <input placeholder="address:" className="col-75 formEntry" type = "text" name = "address"   onChange= {this.handleChangeAddress}/>
             </label>
+            
           
           
-          <button type = "submit"> Add </button>
+          <button  className="submit formEntry" type = "submit"> Add </button>
         </form>
   
- 
+        </div>
+        </div>
 
 
     );

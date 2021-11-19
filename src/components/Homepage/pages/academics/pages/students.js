@@ -49,7 +49,7 @@ render() {
 				<div className="ytg">
 					<h2 className="gg">Student List</h2>
                     {console.log('api response',this.state.students)}
-					<div className="ta,tb"><Table rows={this.state.students} columns={columns} /></div>
+					<div ><Table rows={this.state.students} columns={columns} /></div>
                     
 				</div>
 			</div>
