@@ -76,7 +76,7 @@ export const Table = ({ columns, rows }) => {
             {columns.map((column) => {
               return (
                 <th>
-                  <input
+                  <input className="input-form"
                     key={`${column.accessor}-search`}
                     type="search"
                     placeholder={`Search ${column.label}`}
@@ -119,9 +119,9 @@ export const Table = ({ columns, rows }) => {
         <p>No data found</p>
       )}
 
-      <div>
+      <div className="chg">
         <p>
-          <button className="clear" onClick={clearAll}>Clear all</button>
+          <button className="button2" onClick={clearAll}>Clear all</button>
         </p>
       </div>
       </div>

@@ -5,6 +5,7 @@ import { Table } from '../Tables/table'
 
 import './home.css'
 import '../forms/admission_form.css'
+import SubmitForm from '../forms/admission_form'
 
 const AdmissionDetails= () =>  {
     const columns = [

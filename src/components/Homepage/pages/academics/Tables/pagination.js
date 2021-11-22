@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 
 import React from 'react'
+import './admissiontable.css'
 
 const Pagination = ({ activePage, count, rowsPerPage, totalPages, setActivePage }) => {
     const beginning = activePage === 1 ? 1 : rowsPerPage * (activePage - 1) + 1
@@ -22,12 +23,15 @@ const Pagination = ({ activePage, count, rowsPerPage, totalPages, setActivePage 
             Last ⏭️
           </button>
         </div>
+        <div className="chg">
         <p>
           Page {activePage} of {totalPages}
         </p>
         <p>
           Rows: {beginning === end ? end : `${beginning} - ${end}`} of {count}
         </p>
+        </div>
+        
       </>
     )
   }

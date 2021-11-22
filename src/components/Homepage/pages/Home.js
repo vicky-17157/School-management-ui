@@ -5,8 +5,7 @@ function Homepgs() {
   function onLoad(){  
     window.location = "/aboutpg";  }
   
-    function clickMe(){  
-      window.location = "/admission";  }
+    
   
   
   return (
@@ -23,8 +22,8 @@ function Homepgs() {
             <br />
             Education is key of success</p>
             <div className="button-home">
-              <button onClick={onLoad}><span className="span1"></span>READ MORE</button>
-              <button onClick={clickMe}><span className="span1"></span>APPLY NOW</button>
+              <button className="button1"onClick={onLoad}><span className="span1"></span>READ MORE</button>
+             
               
             </div>
     

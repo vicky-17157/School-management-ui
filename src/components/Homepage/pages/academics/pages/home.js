@@ -34,7 +34,7 @@ const Academicinfo = () =>{
         
           <Link to="/admission">
             <div><img className="ig"src={img} alt='Logo' />
-            <h1 className="centered"><button>Apply Now</button></h1>
+            <h1 className="centered"><button className="button3">Apply Now</button></h1>
             </div>
             </Link>
             
@@ -51,7 +51,7 @@ const Academicinfo = () =>{
             Stanford and all registered students are members. Its elected leadership consists of the Undergraduate Senate elected by the undergraduate students, the Graduate Student Council elected by the graduate students, and the President and Vice President elected as a ticket by the entire student body.</p>
             <Link to="/student">
               <div><img className="pi"src={im} alt='Logo'/>
-              <h1 className="bottom-left"><button> Student Information</button></h1>
+              <h1 className="bottom-left"><button className="button3"> Student Information</button></h1>
               </div>
               </Link> 
               </div>
@@ -64,7 +64,7 @@ const Academicinfo = () =>{
             <Link to='/faculty'>
               <div className="img"><img className="ip"src={imgs} alt='Logo'/>
               
-              <h1 className="bottom-right"><button> Faculty information</button></h1>
+              <h1 className="bottom-right"><button className="button3"> Faculty information</button></h1>
               
               </div>
               </Link>

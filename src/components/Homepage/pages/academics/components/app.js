@@ -8,6 +8,7 @@ import FacultyDetails from '../pages/facultyentry';
 import {  Route, Router, Link, Switch } from "react-router-dom";
 import AddAdmissionForm from '../forms/admission_form';
 import FacultyDetail from '../pages/faculty';
+//import SubmitForm from '../forms/admission_form';
 //import { Link,Route } from 'react';
 
 function StudentApp(){

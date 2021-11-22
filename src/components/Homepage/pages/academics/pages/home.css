@@ -1,7 +1,7 @@
 .gg{
-  text-align: center;
+  text-align:center;
   background-color: azure;
-  background-size: contain;
+  background-size:auto;
   font-weight: bold;
   font-family:fantasy;
   color: crimson;
@@ -15,7 +15,7 @@ color: rgb(15, 15, 15);
 text-align: center;
 text-decoration: crimson;
 margin-top: 20px;
-background-size: contain;
+background-size:cover;
 }
 .gg1:hover{
 background-color: blue;
@@ -109,7 +109,7 @@ font-family:Arial, Helvetica, sans-serif;
   margin: 10px;
   border: 3px solid #333;
   background:rgb(255, 255, 255);
-  border-top: 5px solid #0e3721;
+  border-top: 5px solid #0cf378;
   border-radius:45px ;
   align-items: center;
   justify-content: center;
@@ -123,7 +123,7 @@ font-family:Arial, Helvetica, sans-serif;
 
 
 
-.ta, tb {
+.ta, .tb {
   border: 1px solid black;
   border-collapse: collapse;
 }
@@ -167,5 +167,43 @@ background-color: #e9211b;
   /* position: absolute; */
   bottom: 190px;
   right: 220px;
+  
+}
+
+.button3{
+  width: 200px;
+  padding: 15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 20px;
+  background: transparent;
+  font-weight: bold;
+  border: 3px solid #181616;
+  color: rgb(80, 83, 247);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.span3{
+  background: #e0bcbc;
+  height: 100px;
+  width: 0;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.2s;
+
+}
+.button3:hover span{
+  width: 200px;
+}
+.button3:hover{
+  border: none;
+  color: black;
+  font-weight: bold;
   
 }

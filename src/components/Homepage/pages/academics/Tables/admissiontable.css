@@ -5,39 +5,41 @@
   box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
   
 }
-.ctn{
-  text-align: center;
-}
 
 .fl-table {
   border-radius: 5px;
   font-size: 12px;
   font-weight: normal;
-  border: none;
-  border-collapse: collapse;
+  border: 1px solid black;
+  border-collapse:collapse;
   width: 100%;
   max-width: 100%;
-  white-space: nowrap;
+  white-space:nowrap;
   background-color: white;
-  table-layout: inherit;
+  table-layout:auto;
 }
 
 .fl-table td, .fl-table th {
   text-align: center;
   padding: 8px;
+  
 }
+
 
 .fl-table td {
   border-right: 1px solid #f8f8f8;
-  font-size: 12px;
-  overflow: hidden; 
+  font-size: 15px;
+  overflow:visible; 
   text-overflow: ellipsis; 
   word-wrap: break-word;
+  color: #4f6ac3;
 }
 
 .fl-table thead th {
   color: #ffffff;
   background: #4FC3A1;
+  width: 9rem;
+  height: 1rem;
 }
 
 
@@ -48,7 +50,42 @@
 
 .fl-table tr:nth-child(even) {
   background: #F8F8F8;
+
 }
+
+
+/* {
+  box-sizing: border-box;
+}*/
+
+.input-form {
+  -webkit-appearance: none;
+  border: 1px solid gray;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  background: #f0f0f0;
+  font-size: 5px;
+}
+
+.pagination {
+  margin-top: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive */
 
@@ -93,7 +130,6 @@
   .fl-table thead th {
       text-align: left;
       border-bottom: 1px solid #f7f7f9;
-      text-align: center;
   }
   .fl-table tbody tr {
       display: table-cell;
@@ -116,5 +152,46 @@
       text-align: center;
   }
 }
+
+.button2{
+  width: 200px;
+  padding: 15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 20px;
+  background: transparent;
+  font-weight: bold;
+  border: 3px solid #130304;
+  color: rgb(80, 228, 247);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+}
+
+.span1{
+  background: #e0bcbc;
+  height: 100px;
+  width: 0;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.2s;
+
+}
+.button2:hover span{
+  width: 200px;
+}
+.button2:hover{
+  border: none;
+  color: black;
+  font-weight: bold;
   
-  
+}
+
+.chg{
+  text-align: center;
+}
